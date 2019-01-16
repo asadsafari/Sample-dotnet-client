@@ -40,7 +40,7 @@ namespace ASPNET_OIDC.Controllers
                 string jsonn = new JavaScriptSerializer().Serialize(new
                 {
                     accountNumber = accountNumber,
-                    dateRange = (new { fromDateTime = "2018-03-22 15:58:01", toDateTime = "2018-07-25 16:01:01" }),
+                    dateRange = (new { fromDateTime = "2018-03-22T15:58:01.000Z", toDateTime = "2018-07-25T16:01:01.000Z" }),
                     pageable = (new { page = 0, size = 100 })
                 });
 
