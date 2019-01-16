@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   
+    <link rel="stylesheet" href="@Url.Content("~/images/apple-touch-startup-image-640x920.png")">
+    @Styles.Render("~/css/framework7.css")
+    @Styles.Render("~/style.css")
+    @Styles.Render("~/css/swipebox.css")
+    @Styles.Render("~/css/animations.css")
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css" />
+</head>
+<body id="mobile_wrap">
+
+    <div class="statusbar-overlay"></div>
+
+    <div class="panel-overlay"></div>
+
+    <div class="panel panel-left panel-reveal">
+        <div class="view view-subnav">
+            <div class="pages">
+                <div data-page="panel-leftmenu" class="page pagepanel">
+                    <div class="page-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-right panel-reveal">
+
+    </div>
+
+    <div class="views">
+
+        <div class="view view-main">
+
+
+
+            <div class="pages">
+
+                <div data-page="index" class="page homepage">
+                    <div class="page-content">
+
+                        <div class="navbarpages">
+                            <div class="navbar_left">
+                                <div class="logo_text"><a href="index.html">Maccount</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Slider -->
+                        <div class="swiper-container slidertoolbar swiper-init" data-effect="slide" data-parallax="true" data-pagination=".swiper-pagination" data-next-button=".swiper-button-next" data-prev-button=".swiper-button-prev">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(images/235794e4bbd242f.jpg);">
+                                    <div class="slider_trans">
+                                        <div class="slider-caption" style="font-family: 'IranianSansRegular'">
+                                            <span class="subtitle" data-swiper-parallax="-60%">حساب کتاب شخصی</span>
+                                            <h2 data-swiper-parallax="-100%">هر زمانی که خرید می کنید</h2>
+                                            <p></p>
+                                            <p data-swiper-parallax="-30%">کارمند، مدیر، خانه‌دار یا دانشجو؛ برای همه ما کنترل امور مالی شخصی همیشه سخت بوده. اگر شما هم تو حساب کتاب مشکل دارید؛ اپلیکیشن ماکانت همه چیز رو براتون ساده کرده!</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-container-toolbar swiper-toolbar swiper-init" data-effect="slide" data-slides-per-view="1" data-slides-per-group="1" data-space-between="0" data-pagination=".swiper-pagination-toolbar">
+                            <div class="swiper-pagination-toolbar"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide toolbar-icon">
+                                    <form target="Account/Login">
+                                        <a href="~/Account/SignIn" class="buttons"><img src="~/images/icons/green/users.png" alt="" title="" /><span>اتصال به بانک ملی</span></a>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    @*@Scripts.Render("~/js/jquery-1.10.1.min.js")
+    @Scripts.Render("~/js/jquery.validate.min.js")
+    @Scripts.Render("~/js/framework7.js")
+    @Scripts.Render("~/js/jquery.swipebox.js")
+    @Scripts.Render("~/js/jquery.fitvids.js")
+    @Scripts.Render("~/js/email.js")
+    @Scripts.Render("~/js/audio.min.js")
+    @Scripts.Render("~/js/my-app.js")*@
+</body>

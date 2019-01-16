@@ -1,0 +1,85 @@
+﻿@model ASPNET_OIDC.Models.RootObject
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explosion</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300' rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+    <!--<link href="css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css" />
+</head>
+<body>
+    <nav class="top-navigation">
+        <div class="content">
+            <img class="logo" src="../../images/karma-logo.svg" alt="karma Logo" width="26px">
+        </div>
+    </nav>
+    <section class="introduction">
+        <div class="content" style="font-family: 'IranianSansRegular'">
+            <h1>لیست تراکنش ها</h1>
+            <div class="buttons" dir="rtl">
+                <form target="Account/Login" >
+                    <table class="content">
+                        @if (Model != null)
+                        {
+                            <tr>
+                                <th class="tg-0lax" style="background-color: yellowgreen;padding: 10px">شماره پیگیری</th>
+                                <th class="tg-0lax" style="background-color: yellowgreen">تاریخ تراکنش</th>
+                                <th class="tg-0lax" style="background-color: yellowgreen">مبلغ تراکنش</th>
+                                <th class="tg-0lax" style="background-color: yellowgreen">شعبه</th>
+                                <th class="tg-0lax" style="background-color: yellowgreen">شماره حساب</th>
+
+                                <th class="tg-0lax" style="background-color: yellowgreen">نوع تراکنش</th>
+                               
+                                <th class="tg-0lax" style="background-color: yellowgreen">کانال تراکنش</th>
+                            </tr>
+                            foreach (var item in Model.response.content)
+                            {
+                                <tr>
+                                    <td class="tg-0lax" style="padding: 5px">@item.traceNumber</td>
+                                    <td class="tg-0lax">@item.transactionDateTime</td>
+                                    <td class="tg-0lax">@item.transactionAmount</td>
+                                    <td class="tg-0lax">@item.branchName</td>
+                                    <td class="tg-0lax">@item.accountNumber</td>
+
+                                    <td class="tg-0lax">@item.debitCredit</td>
+                                    
+                                    <td class="tg-0lax">@item.transactionChanel</td>
+                                </tr>
+
+                            }
+                        }
+                    </table>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="social">
+        <div class="content">
+
+            <hr>
+            <h5>به ما بپیوندید</h5>
+            <ul class="icons">
+                <li class="twitter">
+                    <i class="fa fa-twitter"></i>
+                </li>
+                <li class="facebook">
+                    <i class="fa fa-facebook"></i>
+                </li>
+                <li class="instagram">
+                    <i class="fa fa-instagram"></i>
+                </li>
+            </ul>
+            <span class="copy">
+                &copy; Explosion, Inc.
+            </span>
+        </div>
+    </footer>
+
+</body>
+</html>

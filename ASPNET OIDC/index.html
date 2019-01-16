@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-640x920.png">
+    <title>blix - mobile template</title>
+    <link rel="stylesheet" href="css/framework7.css">
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
+    <link type="text/css" rel="stylesheet" href="css/animations.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+</head>
+<body id="mobile_wrap">
+
+    <div class="statusbar-overlay"></div>
+
+    <div class="panel-overlay"></div>
+
+    <div class="panel panel-left panel-reveal">
+        <div class="view view-subnav">
+            <div class="pages">
+                <div data-page="panel-leftmenu" class="page pagepanel">
+                    <div class="page-content">
+                        <nav class="main_nav_icons_inline_2">
+                            <ul>
+                                <li><a href="tables.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/tables.png" alt="" title="" /><span>Tables</span></a></li>
+                                <li><a href="chat.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/message.png" alt="" title="" /><span>Chat messages</span></a></li>
+                                <li><a href="form.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/form.png" alt="" title="" /><span>Custom Form</span></a></li>
+                                <li><a href="contact.html" class="close-panel" data-view=".view-main"><img src="images/icons/white/contact.png" alt="" title="" /><span>Contact</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-right panel-reveal">
+        <div class="user_login_info">
+
+            <div class="user_thumb">
+                <img src="images/page_photo.jpg" alt="" title="" />
+                <div class="user_details">
+                    <p>Welcome, <span>Nathalie</span></p>
+                </div>
+                <div class="user_avatar"><img src="images/avatar.jpg" alt="" title="" /></div>
+            </div>
+
+            <nav class="user-nav">
+                <ul>
+                    <li><a href="features.html" class="close-panel"><img src="images/icons/white/briefcase.png" alt="" title="" /><span>My Account</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="views">
+
+        <div class="view view-main">
+
+
+
+            <div class="pages">
+
+                <div data-page="index" class="page homepage">
+                    <div class="page-content">
+
+                        <div class="navbarpages">
+                            <div class="navbar_left">
+                                <div class="logo_text"><a href="index.html">Maccount</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Slider -->
+                        <div class="swiper-container slidertoolbar swiper-init" data-effect="slide" data-parallax="true" data-pagination=".swiper-pagination" data-next-button=".swiper-button-next" data-prev-button=".swiper-button-prev">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-image:url(images/235794e4bbd242f.jpg);">
+                                    <div class="slider_trans">
+                                        <div class="slider-caption">
+                                            <span class="subtitle" data-swiper-parallax="-60%">حساب کتاب شخصی</span>
+                                            <h2 data-swiper-parallax="-100%">هر زمانی که خرید می کنید</h2>
+                                            <p></p>
+                                            <p data-swiper-parallax="-30%">کارمند، مدیر، خانه‌دار یا دانشجو؛ برای همه ما کنترل امور مالی شخصی همیشه سخت بوده. اگر شما هم تو حساب کتاب مشکل دارید؛ اپلیکیشن ماکانت همه چیز رو براتون ساده کرده!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                        <div class="swiper-container-toolbar swiper-toolbar swiper-init" data-effect="slide" data-slides-per-view="1" data-slides-per-group="1" data-space-between="0" data-pagination=".swiper-pagination-toolbar">
+                            <div class="swiper-pagination-toolbar"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide toolbar-icon">
+                                    <a href="about.html" data-view=".view-main"><img src="images/icons/green/users.png" alt="" title="" /><span>ABOUT</span></a>
+                                    <button><img src="images/icons/green/users.png" alt="" title="" /><span>ABOUT</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- Login Popup -->
+    <div class="popup popup-login">
+        <div class="content-block">
+            <h4>LOGIN</h4>
+            <div class="loginform">
+                <form id="LoginForm" method="post">
+                    <input type="text" name="Username" value="" class="form_input required" placeholder="username" />
+                    <input type="password" name="Password" value="" class="form_input required" placeholder="password" />
+                    <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>
+                    <input type="submit" name="submit" class="form_submit" id="submit" value="SIGN IN" />
+                </form>
+                <div class="signup_bottom">
+                    <p>Don't have an account?</p>
+                    <a href="#" data-popup=".popup-signup" class="open-popup">SIGN UP</a>
+                </div>
+            </div>
+            <div class="close_popup_button">
+                <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Popup -->
+    <div class="popup popup-signup">
+        <div class="content-block">
+            <h4>REGISTER</h4>
+            <div class="loginform">
+                <form id="RegisterForm" method="post">
+                    <input type="text" name="Username" value="" class="form_input required" placeholder="Username" />
+                    <input type="text" name="Email" value="" class="form_input required" placeholder="Email" />
+                    <input type="password" name="Password" value="" class="form_input required" placeholder="Password" />
+                    <input type="submit" name="submit" class="form_submit" id="submitregister" value="SIGN UP" />
+                </form>
+                <h5>- OR REGISTER WITH A SOCIAL ACCOUNT -</h5>
+                <div class="signup_social">
+                    <a href="http://www.facebook.com/" class="signup_facebook external">FACEBOOK</a>
+                    <a href="http://www.twitter.com/" class="signup_twitter external">TWITTER</a>
+                </div>
+            </div>
+            <div class="close_popup_button">
+                <a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/framework7.js"></script>
+    <script src="js/jquery.swipebox.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/audio.min.js"></script>
+    <script src="js/my-app.js"></script>
+</body>
+</html>

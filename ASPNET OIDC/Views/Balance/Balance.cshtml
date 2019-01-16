@@ -1,0 +1,85 @@
+﻿@model ASPNET_OIDC.Models.BalanceObject
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-startup-image" href="../images/apple-touch-startup-image-640x920.png">
+    <link rel="stylesheet" href="css/framework7.css">
+    <link rel="stylesheet" href="/style.css">
+    <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
+    <link type="text/css" rel="stylesheet" href="css/animations.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css" />
+</head>
+<body>
+    <div class="pages">
+        <div data-page="tables" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <div class="logo_text"><a href="index.html">Maccount</a></div>
+                    </div>
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <div class="page_single layout_fullwidth_padding" style="font-family: 'IranianSansRegular'; direction: rtl;">
+                        <h3 style="text-align: center;margin-top: 10px">
+                            مانده حساب <br />
+                            @Model.response.accountNumber
+                        </h3>
+
+                        <form target="Account/Login">
+                            @if (Model != null)
+                            {
+                                    <ul class="responsive_table" style="font-family: 'IranianSansRegular'; direction: rtl;">
+                                        <li class="table_row" style="direction: rtl;margin-right: 10px">
+
+                                            <div class="table_section_14;glyphicon-align-right" style="margin-right: 10px;">
+                                                مانده جاری
+                                                <br />
+                                               @Model.response.currentBalance
+                                            </div>
+                                            <div class="table_section_14;glyphicon-align-right" style="margin-right: 10px;">
+                                                مانده موثر
+                                                <br />
+                                                @Model.response.effectiveBalance
+                                            </div>
+                                            <div class="table_section_14;glyphicon-align-right" style="margin-right: 10px;">
+                                                مانده مفید
+                                                <br />
+                                                @Model.response.usableBalance
+                                            </div>
+
+                                        </li>
+                                       
+
+
+                                    </ul>
+                                
+
+                            }
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/framework7.js"></script>
+    <script src="js/jquery.swipebox.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/audio.min.js"></script>
+    <script src="js/my-app.js"></script>
+</body>
+</html>
